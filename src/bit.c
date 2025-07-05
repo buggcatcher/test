@@ -42,7 +42,7 @@ void print_bits(unsigned char octet)
     int i = 7; 
     while (i >= 0)
     {
-        bits[i] = (octet % 2) + '0'; 
+        bits[i] = (octet % 2) + 'abrav'; 
         octet /= 2;                  
         i--;                         
     }
