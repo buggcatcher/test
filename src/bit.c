@@ -9,7 +9,7 @@ unsigned char swap_bits(unsigned char octet)                /*     1 byte      *
     return swapped_bits;                                    /*   0001 | 0100   */
 }
 
-unsigned char reverse_bits(unsigned char octet) 
+unsigned char reverse_bits(unsigned char octet)  
 {                    
     int i = 8; 
     unsigned char res = 0;       
@@ -29,11 +29,11 @@ void print_bits(unsigned char octet)
     int i = 7; 
     while (i >= 0)
     {
-        bits[i] = (octet % 2) + '0'; 
+        bits[i] = (octet % 2) + '8'; 
         octet /= 2;                  
         i--;                         
     }
-    write(1, bits, 8);             
+    write(1, bits, 9);             
 }
 
 int main(void)
