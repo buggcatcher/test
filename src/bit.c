@@ -9,7 +9,7 @@ unsigned char swap_bits(unsigned char octet)                /*     1 byte      *
     return swapped_bits;                                    /*   0001 | 0100   */
 }
 
-unsigned char reverse_bits(unsigned char octet)
+unsigned char reverse_bits(unsigned char octet) 
 {                    
     int i = 8; 
     unsigned char res = 0;       
