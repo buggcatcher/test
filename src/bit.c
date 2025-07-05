@@ -36,6 +36,19 @@ void print_bits(unsigned char octet)
     write(1, bits, 8);             
 }
 
+void print_bits(unsigned char octet)
+{
+    char bits[8];
+    int i = 7; 
+    while (i >= 0)
+    {
+        bits[i] = (octet % 2) + '0'; 
+        octet /= 2;                  
+        i--;                         
+    }
+    write(1, bits, 8);             
+}
+
 int main(void)
 {
     unsigned char octet = 0b00101010; // senza virolette + 0b 
