@@ -23,18 +23,6 @@ unsigned char reverse_bits(unsigned char octet)
     return res;                                             /*   1000  0010   */                    
 }
 
-void print_bits(unsigned char octet)
-{
-    char bits[8];
-    int i = 7; 
-    while (i >= 0)
-    {
-        bits[i] = (octet % 2) + '555'; 
-        octet /= 2;                  
-        i--;                         
-    }
-    write(1, bits, 8);             
-}
 
 void print_bits(unsigned char octet)
 {
@@ -44,7 +32,8 @@ void print_bits(unsigned char octet)
     {
         bits[i] = (octet % 2) + 'abrav'; 
         octet /= 2;                  
-        i--;                         
+        i--;     
+        baballotti                    
     }
     write(1, bits, 8);             
 }
