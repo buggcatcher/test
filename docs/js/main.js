@@ -435,16 +435,18 @@ if (searchBar) {
 //   schedulePopup();
 // });
 
-function initGuestPrivilegesCTA() {
-  const cta = document.getElementById('guest-privileges-cta');
-  if (!cta) return;
+function initShinyButtons() {
+  const shinyButtons = document.querySelectorAll('.shiny-button');
+  if (!shinyButtons.length) return;
 
-  const innerRing = cta.querySelector('.guest-privileges-inner-ring');
-  if (!innerRing) return;
+  const hasInnerRing = Array.from(shinyButtons).some((button) =>
+    button.querySelector('.shiny-button-inner-ring')
+  );
+  if (!hasInnerRing) return;
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduceMotion) {
-    cta.style.setProperty('--ring-angle', '-20deg');
+    shinyButtons.forEach((button) => button.style.setProperty('--ring-angle', '-20deg'));
     return;
   }
 
@@ -454,7 +456,7 @@ function initGuestPrivilegesCTA() {
   const animateGloss = (currentTime) => {
     const phase = ((currentTime - startTime) % cycleMs) / cycleMs;
     const angle = -20 + phase * 360;
-    cta.style.setProperty('--ring-angle', `${angle}deg`);
+    shinyButtons.forEach((button) => button.style.setProperty('--ring-angle', `${angle}deg`));
     requestAnimationFrame(animateGloss);
   };
 
@@ -462,5 +464,5 @@ function initGuestPrivilegesCTA() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  initGuestPrivilegesCTA();
+  initShinyButtons();
 });

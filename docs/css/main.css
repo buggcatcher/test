@@ -955,13 +955,13 @@ body {
   color: #000;
 } */
 
-.guest-privileges-wrap {
+.shiny-button-wrap {
   display: flex;
   justify-content: center;
   margin: 1.2rem 0 0.5rem;
 }
 
-.guest-privileges-cta {
+.shiny-button {
   --ring-angle: -20deg;
   position: relative;
   width: min(80vw, 360px);
@@ -980,7 +980,7 @@ body {
   transition: transform 0.18s ease, box-shadow 0.2s ease;
 }
 
-.guest-privileges-cta:hover {
+.shiny-button:hover {
   transform: translateY(-1px);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.26),
@@ -989,11 +989,11 @@ body {
     0 14px 30px rgba(37, 178, 170, 0.28);
 }
 
-.guest-privileges-cta:active {
+.shiny-button:active {
   transform: translateY(1px) scale(0.995);
 }
 
-.guest-privileges-inner-ring {
+.shiny-button-inner-ring {
   position: absolute;
   inset: 3px;
   padding: 1.5px;
@@ -1021,7 +1021,7 @@ body {
   mask-composite: exclude;
 }
 
-.guest-privileges-text {
+.shiny-button-text {
   position: relative;
   z-index: 2;
   color: #ffffff;
